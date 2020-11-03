@@ -11,11 +11,12 @@ public class Launcher   {
 	
 	public void displayTextNotes()
 	{
+		int i = 1;
 		List<TextNote> tn = ns.getAllTextNotes();
 		
 		for(TextNote t : tn)
 		{
-			int i=1 ;
+			
 			System.out.println("Text Note " + i +": " + t.getNotes());
 			i++;
 		}
@@ -24,11 +25,12 @@ public class Launcher   {
 	public void displayTextAndImageNotes()
 	{
 		List<TextAndImageNote> tn = ns.getAllTextAndImageNotes();
-		
+		int j=1 ;
 		for(TextAndImageNote t : tn)
 		{
-			int j=1 ;
+			
 			System.out.println("Text and Image Note " + j +": " + t.getNotes() + "," + t.getUrl());
+			j++;
 		}
 	}
 	
