@@ -15,7 +15,11 @@ public class NoteStore {
 	}
 
 	public void storeNote(String message, String url) {
-		notes.add(new TextAndImageNote(message, url));
+		try {
+			notes.add(new TextAndImageNote(message, url));
+		} catch (InvalidImageUrlException e) {
+			System.out.println(e.getMessage() + " Please Enter Note again");
+		}
 	}
 	
 	public List<TextNote> getTextNotes(){

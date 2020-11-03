@@ -22,8 +22,9 @@ public class Launcher {
 		noteStore.storeNote("Java is a set of Computer...");
 		noteStore.storeNote("Few Books to read...");
 		
-		noteStore.storeNote("The shopping list...", "//foo/bar1/imgset1.jpg");
-		noteStore.storeNote("The size label of...", "//foo/bar2/imgset2.jpg");
+		noteStore.storeNote("The size label of...", "//foo/bar1/imgset1");
+		noteStore.storeNote("The shopping list...", "//foo/bar2/imgset2.jpg");
+		noteStore.storeNote("The size label of...", "//foo/bar3/imgset3.png");
 		
 		displayTextNotes();
 		displayTextAndImageNotes();

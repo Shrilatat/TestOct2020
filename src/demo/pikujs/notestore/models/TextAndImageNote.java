@@ -5,10 +5,10 @@ public class TextAndImageNote implements Note {
 	private String text, url;
 	private static int maxId = 0;
 	
-	public TextAndImageNote(String message, String url) {
+	public TextAndImageNote(String message, String url) throws InvalidImageUrlException {
 		this.noteId = ++maxId;
 		this.text = message;
-		this.url = url;
+		this.setUrl(url);
 	}
 
 	public String getText() {
@@ -23,8 +23,10 @@ public class TextAndImageNote implements Note {
 		return url;
 	}
 
-	public void setUrl(String url) {
-		this.url = url;
+	public void setUrl(String url) throws InvalidImageUrlException {
+		if(url.endsWith(".jpg") || url.endsWith(".png"))
+			this.url = url;
+		else throw new InvalidImageUrlException();
 	}
 
 	@Override
