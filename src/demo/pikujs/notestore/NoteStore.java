@@ -18,7 +18,7 @@ public class NoteStore {
 		try {
 			notes.add(new TextAndImageNote(message, url));
 		} catch (InvalidImageUrlException e) {
-			System.out.println(e.getMessage() + " Please Enter Note again");
+			System.out.println(e.getMessage() + " Please Enter Note again.");
 		}
 	}
 	
