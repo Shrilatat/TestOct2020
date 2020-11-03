@@ -1,9 +1,6 @@
 package com.hsbc.service;
 
 import java.util.ArrayList;
-
-import javax.security.auth.callback.LanguageCallback;
-
 import com.hsbc.dao.NoteStore;
 import com.hsbc.model.Notes;
 import com.hsbc.model.TextAndImageNote;
@@ -27,6 +24,9 @@ public class Launcher {
 	public void displayTextAndImageNotes(NoteStore store) {
 		
 		ArrayList<Notes> text_list = store.getAllTextAndImageNotes();
+		
+		System.out.println();
+		
 		
 		int count =1;
 		for(Notes note : text_list) { 

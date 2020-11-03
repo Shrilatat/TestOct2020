@@ -26,7 +26,7 @@ public class Notes {
 		System.out.println(text); ;
 	}
 	
-	public int nytpe() {
+	public int ntype() {
 		return 0;
 	}
 

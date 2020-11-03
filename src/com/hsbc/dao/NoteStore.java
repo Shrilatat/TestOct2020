@@ -15,6 +15,7 @@ public class NoteStore {
 		
 		TextNote newtext = new TextNote(msg);
 		store.add(newtext);
+
 		
 	}
 	
@@ -24,6 +25,7 @@ public class NoteStore {
 		TextAndImageNote newimage = new TextAndImageNote(msg, url);
 		
 		store.add(newimage);
+
 		
 	}
 	
@@ -31,10 +33,9 @@ public class NoteStore {
 		
 		ArrayList<Notes> mylist = new ArrayList<>();
 		
-		for(Notes n : mylist) {
-			if(n.nytpe() == 1) {
+		for(Notes n : store) {
+			if(n.ntype() == 1 || n.ntype()==0) {
 				mylist.add(n);
-				
 			}
 		}
 		
@@ -44,11 +45,9 @@ public class NoteStore {
 	}
 	public ArrayList<Notes> getAllTextAndImageNotes(){
 		
-		ArrayList<Notes> mylist= new ArrayList<>();
-		
-		for(Notes n : mylist) {
-			if(n.nytpe() == 2) {
-				System.out.println(" check");
+		ArrayList<Notes> mylist= new ArrayList<>();	
+		for(Notes n : store) {
+			if(n.ntype() == 2) {
 				mylist.add(n);
 				
 			}
